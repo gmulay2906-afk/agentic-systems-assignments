@@ -13,5 +13,18 @@ class User(BaseModel):
     address : Address
     is_premium : bool = False
 
+user_data = {
+    'user_id' : 1,
+    'name' : 'Chirag',
+    'email' : 'abc@gmaul.com',
+    'age' : 20,
+    'address' : {
+        'city' : 'New York',
+        'pincode' : 10001
+    }
+}
 
-    
+user = User(**user_data)
+print(user)
+
+print(user.model_dump)
